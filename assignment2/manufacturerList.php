@@ -33,7 +33,7 @@
                   <h5 class="card-title">'. $manufacturer['manufacturer_name'].'</h5>
                 </div>
                 <div class ="card-footer">
-                    <form method="GET" action="updateRiderForm.php">
+                    <form method="GET" action="updateManufacturerForm.php">
                       <input type="hidden" name="id" value="' . $manufacturer['id'] . '">
                       <button type="submit" name="edit" class="btn btn-sm btn-info">Edit</button>
                     </form>

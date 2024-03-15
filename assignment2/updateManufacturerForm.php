@@ -27,25 +27,8 @@
         <form action="includes/updateManufacturer.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $result['id']; ?>">
             <div class="mb-3">
-                <label for="fname" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="fname" name="fname"aria-describedby="fname" value="<?php echo $result['fname']; ?>">
-                <div id="emailHelp" class="form-text"></div>
-            </div>
-            <div class="mb-3">
-                <label for="lname" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lname" name="lname" aria-describedby="lname" value="<?php echo $result['lname']; ?>">
-            </div>
-            <div class="mb-3">
-                <label for="team" class="form-label">Team</label>
-                <input type="text" class="form-control" id="team" name="team" aria-describedby="team"value="<?php echo $result['team']; ?>">
-            </div>
-            <div class="mb-3">
-                <label for="nationality" class="form-label">Nationality</label>
-                <input type="text" class="form-control" id="nationality" name="nationality" aria-describedby="nationality" value="<?php echo $result['nationality']; ?>">
-            </div>
-            <div class="mb-3">
-                <label for="manufacturer_id" class="form-label">Manufacturer ID</label>
-                <input type="number" class="form-control" id="manufacturer_id" name="manufacturer_id" aria-describedby="manufacturer_id" value="<?php echo $result['manufacturer_id']; ?>">
+                <label for="manufacturer_name" class="form-label">Manufacturer Name</label>
+                <input type="text" class="form-control" id="manufacturer_name" name="manufacturer_name"aria-describedby="manufacturer_name" value="<?php echo $result['manufacturer_name']; ?>">
             </div>
             <div class="mb-3">
                 <label for="imageURL" class="form-label">Image URL</label>

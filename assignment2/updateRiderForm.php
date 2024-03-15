@@ -29,7 +29,6 @@
             <div class="mb-3">
                 <label for="fname" class="form-label">First Name</label>
                 <input type="text" class="form-control" id="fname" name="fname"aria-describedby="fname" value="<?php echo $result['fname']; ?>">
-                <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="mb-3">
                 <label for="lname" class="form-label">Last Name</label>
