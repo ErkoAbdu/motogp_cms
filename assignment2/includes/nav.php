@@ -35,6 +35,10 @@
             <li><a class="dropdown-item" href="por.php">Portuguese Riders</a></li>
             <li><a class="dropdown-item" href="jap.php">Japanese Riders</a></li>
           </ul>
+          <!-- LOGOUT -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" aria-current="page">Logout</a>
+          </li>
         </li>
         </ul>
       </header>
