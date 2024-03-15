@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Feb 20, 2024 at 11:21 PM
+-- Generation Time: Mar 15, 2024 at 01:31 AM
 -- Server version: 5.7.39
 -- PHP Version: 8.2.0
 
@@ -47,8 +47,6 @@ INSERT INTO `riders_table` (`id`, `fname`, `lname`, `team`, `manufacturer_id`, `
 (3, 'Aleix', 'Espargaro', 'Aprilia Racing', 3, 'Spain', 'https://cdn-1.motorsport.com/images/mgl/0RrVnBO0/s600/aleix-espargaro-aprilia-racing-1.webp'),
 (4, 'Maverick', 'Vinales', 'Aprilia Racing', 3, 'Spain', 'https://cdn-9.motorsport.com/images/mgl/2jXnZAg6/s600/maverick-vinales-aprilia-racin-1.webp'),
 (5, 'Joan', 'Mir', 'Repsol Honda Team', 4, 'Spain', 'https://cdn-9.motorsport.com/images/mgl/0rG3dkd2/s600/joan-mir-repsol-honda-team.webp'),
-(6, 'Luca', 'Marini', 'Repsol Honda Team', 4, 'Italy', 'https://cdn-9.motorsport.com/images/mgl/6zQegBLY/s600/luca-marini-repsol-honda-team.webp'),
-(7, 'Jack', 'Miller', 'Red Bull KTM Factory Racing', 2, 'Australia', 'https://cdn-2.motorsport.com/images/mgl/6b7knZn0/s600/jack-miller-red-bull-ktm-facto-1.webp'),
 (8, 'Brad', 'Binder', 'Red Bull KTM Factory Racing', 2, 'South Africa', 'https://cdn-2.motorsport.com/images/mgl/68yNAvD0/s600/brad-binder-red-bull-ktm-facto-1.webp'),
 (9, 'Marc', 'Marquez', 'Gresini Racing MotoGP', 1, 'Spain', 'https://cdn-1.motorsport.com/images/mgl/0rG37m52/s600/marc-marquez-gresini-racing.webp'),
 (10, 'Alex', 'Marquez', 'Gresini Racing MotoGP', 1, 'Spain', 'https://cdn-8.motorsport.com/images/mgl/68yrKZx0/s600/alex-marquez-gresini-racing.webp'),
@@ -63,7 +61,9 @@ INSERT INTO `riders_table` (`id`, `fname`, `lname`, `team`, `manufacturer_id`, `
 (19, 'Johann', 'Zarco', 'LCR Honda Castrol/Idemitsu', 4, 'France', 'https://cdn-3.motorsport.com/images/mgl/6l9yZQx0/s600/johann-zarco-pramac-racing-1.webp'),
 (20, 'Takaaki', 'Nakagami', 'LCR Honda Castrol/Idemitsu', 4, 'Japan', 'https://cdn-9.motorsport.com/images/mgl/0rGynXG2/s600/takaaki-nakagami-lcr-honda-1.webp'),
 (21, 'Fabio', 'Quartararo', 'Monster Energy Yamaha MotoGP', 5, 'France', 'https://cdn-6.motorsport.com/images/mgl/YP3wdKQ2/s600/fabio-quartararo-yamaha-factor.webp'),
-(22, 'Alex', 'Rins', 'Monster Energy Yamaha MotoGP', 5, 'Spain', 'https://cdn-1.motorsport.com/images/mgl/2wBdQGM0/s600/alex-rins-yamaha-factory-racin.webp');
+(22, 'Alex', 'Rins', 'Monster Energy Yamaha MotoGP', 5, 'Spain', 'https://cdn-1.motorsport.com/images/mgl/2wBdQGM0/s600/alex-rins-yamaha-factory-racin.webp'),
+(25, 'Luca', 'Marini', 'Repsol Honda Team', 4, 'Italy', 'https://cdn-2.motorsport.com/images/mgl/6zQegBLY/s600/luca-marini-repsol-honda-team.webp'),
+(26, 'Jack', 'Miller', 'Red Bull KTM Factory Racing', 2, 'Australia', 'https://cdn-4.motorsport.com/images/mgl/6xEgvy50/s600/jack-miller-red-bull-ktm-facto.webp');
 
 --
 -- Indexes for dumped tables
@@ -84,7 +84,7 @@ ALTER TABLE `riders_table`
 -- AUTO_INCREMENT for table `riders_table`
 --
 ALTER TABLE `riders_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables
