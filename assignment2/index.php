@@ -38,14 +38,14 @@
                   <li class="list-group-item"><strong>Nationality</strong>: '. $rider['nationality'] .'</li>
                   <li class="list-group-item"><strong>Manufacturer</strong>: '. $rider['manufacturer_name'] .'</li>
                 </ul>
-                <div class ="card-footer">
+                <div class ="card-footer d-flex display-flex:row justify-content-center">
                     <form method="GET" action="updateRiderForm.php">
                       <input type="hidden" name="id" value="' . $rider['id'] . '">
-                      <button type="submit" name="edit" class="btn btn-sm btn-info">Edit</button>
+                      <button type="submit" name="edit" class="btn btn-sm btn-info m-1">Edit</button>
                     </form>
                     <form method="GET" action="includes/deleteRider.php">
                         <input type="hidden" name="id" value="' . $rider['id'] . '">
-                        <button type="submit" name="delete" class="btn btn-sm btn-danger">Delete</button>
+                        <button type="submit" name="delete" class="btn btn-sm btn-danger m-1">Delete</button>
                     </form>
                 </div>
               </div>
