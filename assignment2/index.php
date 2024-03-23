@@ -8,7 +8,16 @@
   <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-  <?php include('includes/nav.php');?>
+  <?php include('includes/nav.php');
+ include('includes/config.php');
+   include('includes/function.php');
+  
+   secure();
+  ?>
+  
+  
+  
+  
   <?php
     include("includes/connect.php");
     // $connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758274', 'x96gqbkkqqrl', 'if0_35758274_http5225');
