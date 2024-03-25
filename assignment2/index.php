@@ -8,12 +8,11 @@
   <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-  <?php include('includes/nav.php');
- include('includes/config.php');
-   include('includes/function.php');
-  
-   secure();
-  ?>
+ <?php 
+ include("includes/nav.php");
+//  include("includes/function.php");
+//  include("includes/logout.php");
+ ?>
   
   
   

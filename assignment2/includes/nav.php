@@ -37,7 +37,7 @@
           </ul>
           <!-- LOGOUT -->
           <li class="nav-item">
-            <a class="nav-link" href="#" aria-current="page">Logout</a>
+            <a class="nav-link" href="includes/logout.php" aria-current="page">Logout</a>
           </li>
         </li>
         </ul>

@@ -2,8 +2,8 @@
 
 include('includes/config.php');
 include('includes/connect.php');
-include('includes/function.php');
-secure();
+// include('includes/function.php');
+// secure();
 
 if (isset($_POST['email'])) {
 
