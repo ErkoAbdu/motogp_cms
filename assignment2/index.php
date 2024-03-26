@@ -5,7 +5,7 @@
   include ("includes/functions.php");
   // print_r($_POST);
   if(isset($_POST['login'])){
-    print_r("this is working");
+    // print_r("this is working");
     $query = 'SELECT *
             FROM users
             WHERE email = "' . $_POST['email'] . '"
@@ -27,7 +27,7 @@
     }
     else
     {
-      print_r("this isnt working");
+      // print_r("this isnt working");
       set_message('Incorrect username/password');
       header('Location: index.php');
       die();

@@ -2,7 +2,7 @@
   if(isset($_GET['delete'])){
     $id = $_GET['id'];
 
-    include ('../includes/connect.php');
+    include ('connect.php');
 
     $query = "DELETE FROM manufacturer_table WHERE `id` = '$id'";
     $manufacturer = mysqli_query($connect, $query);

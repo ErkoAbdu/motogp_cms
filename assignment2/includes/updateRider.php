@@ -15,7 +15,7 @@
     $rider = mysqli_query($connect, $query);
 
     if($rider){
-        header("Location: ../index.php");
+        header("Location: ../home.php");
     }else{
         echo "Failed" . mysqli_error($connect);
     }

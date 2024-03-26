@@ -3,7 +3,7 @@
     $manufacturerName = $_POST['manufacturer_name'];
     $imageURL = $_POST['imageURL'];
 
-    include ('../includes/connect.php');
+    include ('connect.php');
     $query = "INSERT INTO manufacturer_table (manufacturer_name, imageURL) VALUES ('$manufacturerName','$imageURL')";
 
     $manufacturers = mysqli_query($connect, $query);

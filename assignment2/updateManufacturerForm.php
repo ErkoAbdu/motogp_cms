@@ -22,8 +22,9 @@ secure();
             </div>
         </div>
         <?php
+            include("includes/connect.php");
             $id = $_GET['id'];
-            $connect = mysqli_connect('localhost', 'root', 'root', 'HTTP5225');
+            // $connect = mysqli_connect('localhost', 'root', 'root', 'HTTP5225');
             $query = "SELECT * FROM manufacturer_table WHERE `id` = '$id'";
             $manufacturer = mysqli_query($connect, $query);
 

@@ -3,7 +3,7 @@ include("includes/config.php");
 include ("includes/functions.php");
 
 secure();
-print_r($_SESSION);
+// print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
