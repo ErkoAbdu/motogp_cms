@@ -1,66 +1,70 @@
+<?php 
+  include ("includes/config.php");
+  include ("includes/connect.php");
+  include ("includes/nav.php");
+  include ("includes/functions.php");
+  // print_r($_POST);
+  if(isset($_POST['login'])){
+    print_r("this is working");
+    $query = 'SELECT *
+            FROM users
+            WHERE email = "' . $_POST['email'] . '"
+            AND password = "' . md5($_POST['password']) . '"
+            LIMIT 1';
+    $result = mysqli_query($connect, $query);
+
+    if(mysqli_num_rows($result)){
+
+      $record = mysqli_fetch_assoc($result);
+
+      $_SESSION['id'] = $record['id'];
+      $_SESSION['email'] = $_POST['email'];
+
+      // print_r($_SESSION);
+
+      header('Location: home.php');
+      die();
+    }
+    else
+    {
+      print_r("this isnt working");
+      set_message('Incorrect username/password');
+      header('Location: index.php');
+      die();
+    }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MotoGP Grid 2024</title>
-  <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGP | Login</title>
+    <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
- <?php 
- include("includes/nav.php");
-//  include("includes/function.php");
-//  include("includes/logout.php");
- ?>
-  
-  
-  
-  
-  <?php
-    include("includes/connect.php");
-    // $connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758274', 'x96gqbkkqqrl', 'if0_35758274_http5225');
-    $query = 'SELECT riders_table.id, riders_table.fname, riders_table.lname, riders_table.team, riders_table.nationality, manufacturer_table.manufacturer_name, riders_table.imageURL
-    FROM riders_table 
-    JOIN manufacturer_table  ON riders_table.manufacturer_id = manufacturer_table.id';
-
-    $riders= mysqli_query($connect, $query);
-
-    if(mysqli_connect_error()){
-      die("Connection error: " . mysqli_connect_error());
-    }
-  ?>
-  <div class="container">
-    <div class="row">
-      <?php
-        foreach ($riders as $rider){
-          echo 
-            '<div class="col-md-4 mb-3">
-              <div class="card" style="width: 18rem;">
-                <img src="'. $rider['imageURL'] . '" class="card-img-top" alt="MotoGP rider">
-                <div class="card-body">
-                  <h5 class="card-title">'. $rider['fname']. ' ' . $rider['lname'].'</h5>
-                  <p class="card-text"><strong>Team</strong>: '. $rider['team'] .'</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><strong>Nationality</strong>: '. $rider['nationality'] .'</li>
-                  <li class="list-group-item"><strong>Manufacturer</strong>: '. $rider['manufacturer_name'] .'</li>
-                </ul>
-                <div class ="card-footer d-flex display-flex:row justify-content-center">
-                    <form method="GET" action="updateRiderForm.php">
-                      <input type="hidden" name="id" value="' . $rider['id'] . '">
-                      <button type="submit" name="edit" class="btn btn-sm btn-info m-1">Edit</button>
-                    </form>
-                    <form method="GET" action="includes/deleteRider.php">
-                        <input type="hidden" name="id" value="' . $rider['id'] . '">
-                        <button type="submit" name="delete" class="btn btn-sm btn-danger m-1">Delete</button>
-                    </form>
-                </div>
+    <div class = "container">
+        <div class = "row">
+            <div class="col">
+                <h1 class="display-3 mt-4 mb-4">Login</h1>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+          <form method="POST">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
-            </div>';
-        }
-      ?>
-    </div>
-  </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password">
+              </div>
+              <input type="submit" name="login" class="btn btn-primary" value="Submit"/>
+            </form>
+          </div>
+        </div>
+    </div> 
 </body>
 </html>

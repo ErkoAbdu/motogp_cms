@@ -20,8 +20,7 @@ secure();
     // $connect = mysqli_connect('sql311.infinityfree.com', 'if0_35758274', 'x96gqbkkqqrl', 'if0_35758274_http5225');
     $query = 'SELECT riders_table.id, riders_table.fname, riders_table.lname, riders_table.team, riders_table.nationality, manufacturer_table.manufacturer_name, riders_table.imageURL
     FROM riders_table 
-    JOIN manufacturer_table  ON riders_table.manufacturer_id = manufacturer_table.id
-    WHERE riders_table.nationality = "Japan"';
+    JOIN manufacturer_table  ON riders_table.manufacturer_id = manufacturer_table.id';
 
     $riders= mysqli_query($connect, $query);
 
@@ -45,14 +44,14 @@ secure();
                   <li class="list-group-item"><strong>Nationality</strong>: '. $rider['nationality'] .'</li>
                   <li class="list-group-item"><strong>Manufacturer</strong>: '. $rider['manufacturer_name'] .'</li>
                 </ul>
-                <div class ="card-footer">
+                <div class ="card-footer d-flex display-flex:row justify-content-center">
                     <form method="GET" action="updateRiderForm.php">
                       <input type="hidden" name="id" value="' . $rider['id'] . '">
-                      <button type="submit" name="edit" class="btn btn-sm btn-info">Edit</button>
+                      <button type="submit" name="edit" class="btn btn-sm btn-info m-1">Edit</button>
                     </form>
                     <form method="GET" action="includes/deleteRider.php">
                         <input type="hidden" name="id" value="' . $rider['id'] . '">
-                        <button type="submit" name="delete" class="btn btn-sm btn-danger">Delete</button>
+                        <button type="submit" name="delete" class="btn btn-sm btn-danger m-1">Delete</button>
                     </form>
                 </div>
               </div>

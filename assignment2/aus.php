@@ -1,3 +1,9 @@
+<?php
+include ("includes/functions.php");
+include ("includes/config.php");
+
+secure();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

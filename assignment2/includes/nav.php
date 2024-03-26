@@ -6,7 +6,7 @@
         <!-- NAV LINKS FOR HOME AND ADDING A NEW RIDER -->
         <ul class="nav nav-pills justify-content-center">
           <li class="nav-item">
-            <a class="nav-link" href="index.php" aria-current="page">Home</a>
+            <a class="nav-link" href="home.php" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="newRider.php">Add New Rider</a>
@@ -35,6 +35,10 @@
             <li><a class="dropdown-item" href="por.php">Portuguese Riders</a></li>
             <li><a class="dropdown-item" href="jap.php">Japanese Riders</a></li>
           </ul>
+          <!-- CREATE USER -->
+          <li class="nav-item">
+            <a class="nav-link" href="users.php" aria-current="page">Create User</a>
+          </li>
           <!-- LOGOUT -->
           <li class="nav-item">
             <a class="nav-link" href="includes/logout.php" aria-current="page">Logout</a>
