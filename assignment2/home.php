@@ -1,8 +1,9 @@
 <?php
+include("includes/config.php");
 include ("includes/functions.php");
-include ("includes/config.php");
 
 secure();
+print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -39,10 +39,17 @@
           <li class="nav-item">
             <a class="nav-link" href="users.php" aria-current="page">Create User</a>
           </li>
-          <!-- LOGOUT -->
-          <li class="nav-item">
-            <a class="nav-link" href="includes/logout.php" aria-current="page">Logout</a>
-          </li>
+          <!-- LOGOUT: If the session id does not match then it will not display the logout button -->
+          <?php
+          if(isset($_SESSION['id'])){
+          echo <<<EOT
+              <li class="nav-item">
+                <a class="nav-link" href="includes/logout.php" aria-current="page">Logout</a>
+              </li>
+            EOT;
+          }
+          ?>
+          
         </li>
         </ul>
       </header>
